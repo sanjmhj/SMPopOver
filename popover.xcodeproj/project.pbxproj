@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F30239601CCF1ACA008BFF26 /* OptionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302395F1CCF1ACA008BFF26 /* OptionsCell.swift */; };
+		F302399F1CCF4527008BFF26 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F302399E1CCF4527008BFF26 /* BasicCell.swift */; };
 		F3052F2C1CCDF20B00B4DB96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3052F2B1CCDF20B00B4DB96 /* AppDelegate.swift */; };
 		F3052F2E1CCDF20B00B4DB96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3052F2D1CCDF20B00B4DB96 /* ViewController.swift */; };
 		F3052F311CCDF20B00B4DB96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3052F2F1CCDF20B00B4DB96 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		F302395F1CCF1ACA008BFF26 /* OptionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsCell.swift; sourceTree = "<group>"; };
+		F302399E1CCF4527008BFF26 /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 		F3052F281CCDF20B00B4DB96 /* popover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = popover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3052F2B1CCDF20B00B4DB96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3052F2D1CCDF20B00B4DB96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				F3052F5C1CCDFB7600B4DB96 /* FirstVC.swift */,
 				F33BF76F1CCE16C5004B51B4 /* PopOverSingle.swift */,
 				F302395F1CCF1ACA008BFF26 /* OptionsCell.swift */,
+				F302399E1CCF4527008BFF26 /* BasicCell.swift */,
 			);
 			path = popover;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				F3052F341CCDF20B00B4DB96 /* popover.xcdatamodeld in Sources */,
 				F33BF7701CCE16C5004B51B4 /* PopOverSingle.swift in Sources */,
 				F30239601CCF1ACA008BFF26 /* OptionsCell.swift in Sources */,
+				F302399F1CCF4527008BFF26 /* BasicCell.swift in Sources */,
 				F3052F2C1CCDF20B00B4DB96 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
