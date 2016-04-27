@@ -83,6 +83,9 @@
                         <segue destination="UhN-On-B4f" kind="popoverPresentation" identifier="PopSegueID" popoverAnchorView="8cS-Lf-eQZ" id="y6Z-2d-Bfx">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
+                        <segue destination="UFO-Gv-1dX" kind="popoverPresentation" identifier="PopImageSegueID" popoverAnchorView="8cS-Lf-eQZ" id="eeV-IG-O3j">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gsi-6f-mp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,6 +151,8 @@
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="150" height="54"/>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="200"/>
                     <connections>
                         <outlet property="optionsTV" destination="AxP-sg-avP" id="CvQ-Uk-bfQ"/>
                     </connections>
@@ -155,6 +160,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ita-6A-7Nl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-805" y="-93"/>
+        </scene>
+        <!--Pop Over Image-->
+        <scene sceneID="VvA-e3-OJN">
+            <objects>
+                <viewController id="UFO-Gv-1dX" customClass="PopOverImage" customModule="popover" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vAc-FF-YVN"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Y0-yn-IGE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2RO-Yh-hJn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ddg-logo-wide copy" translatesAutoresizingMaskIntoConstraints="NO" id="iGY-tY-ege">
+                                <rect key="frame" x="20" y="20" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="MVN-5P-q5a"/>
+                                    <constraint firstAttribute="width" constant="300" id="lTW-kL-x6m"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrU-Xa-oBz">
+                                <rect key="frame" x="141" y="270" width="18" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iGY-tY-ege" firstAttribute="leading" secondItem="2RO-Yh-hJn" secondAttribute="leadingMargin" id="1UK-Ot-Mew"/>
+                            <constraint firstItem="hrU-Xa-oBz" firstAttribute="top" secondItem="iGY-tY-ege" secondAttribute="bottom" constant="50" id="32C-cs-J4B"/>
+                            <constraint firstItem="hrU-Xa-oBz" firstAttribute="leading" secondItem="2RO-Yh-hJn" secondAttribute="leadingMargin" constant="121" id="Ab5-tv-Los"/>
+                            <constraint firstItem="iGY-tY-ege" firstAttribute="top" secondItem="vAc-FF-YVN" secondAttribute="bottom" id="BW6-yE-82N"/>
+                            <constraint firstItem="iGY-tY-ege" firstAttribute="top" secondItem="vAc-FF-YVN" secondAttribute="bottom" id="PIP-70-7sG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iGY-tY-ege" secondAttribute="trailing" id="Pqg-Yj-d6w"/>
+                            <constraint firstItem="0Y0-yn-IGE" firstAttribute="top" secondItem="iGY-tY-ege" secondAttribute="bottom" id="RAY-6x-gdf"/>
+                            <constraint firstItem="iGY-tY-ege" firstAttribute="leading" secondItem="2RO-Yh-hJn" secondAttribute="leadingMargin" id="mwe-zM-bS9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1UK-Ot-Mew"/>
+                                <exclude reference="BW6-yE-82N"/>
+                                <exclude reference="Pqg-Yj-d6w"/>
+                                <exclude reference="RAY-6x-gdf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="iGY-tY-ege" id="fxa-r7-pF4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ucB-d2-1V4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-708" y="352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Kw-oC-vRr">
@@ -173,4 +232,7 @@
             <point key="canvasLocation" x="-2830" y="161"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ddg-logo-wide copy" width="620" height="440"/>
+    </resources>
 </document>

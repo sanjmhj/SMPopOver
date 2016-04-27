@@ -5,6 +5,7 @@ class ViewController: UITableViewController {
     var titleView: UIView?
     var navTitle: UILabel?
     var popoverViewController: PopOverSingle!
+    var popoverImageController: PopOverImage!
     var width: CGFloat?
     var height: CGFloat?
 
@@ -37,11 +38,18 @@ class ViewController: UITableViewController {
             popoverViewController.popoverPresentationController?.sourceView = self.navigationController?.navigationBar.topItem?.titleView
             popoverViewController.popoverPresentationController?.sourceRect = CGRect(x: self.titleView!.frame.width / 2, y: 0, width: 0, height: height!)
             popoverViewController.popoverPresentationController?.permittedArrowDirections = .Up
+        } else if segue.identifier == "PopImageSegueID" {
+            popoverImageController = segue.destinationViewController as! PopOverImage
+            popoverImageController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverImageController.popoverPresentationController!.delegate = self
+            popoverImageController.popoverPresentationController?.sourceView = self.navigationController?.navigationBar.topItem?.titleView
+            popoverImageController.popoverPresentationController?.sourceRect = CGRect(x: self.titleView!.frame.width / 2, y: 0, width: 0, height: height!)
+            popoverImageController.popoverPresentationController?.permittedArrowDirections = .Up
         }
     }
     
     func popOverController(sender: UITapGestureRecognizer) {
-        self.performSegueWithIdentifier("PopSegueID", sender: self)
+        self.performSegueWithIdentifier("PopImageSegueID", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
