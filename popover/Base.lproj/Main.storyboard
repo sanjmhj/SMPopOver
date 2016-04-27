@@ -49,7 +49,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicCellID" id="ahi-xS-KL0" customClass="BasicCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicCellID" id="ahi-xS-KL0" customClass="BasicCell" customModule="popover" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ahi-xS-KL0" id="f5K-ue-18v">
@@ -69,12 +69,12 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="label" destination="6lG-L9-PdT" id="leL-YO-NlE"/>
+                                    <outlet property="label" destination="6lG-L9-PdT" id="B4R-Ry-bge"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="Gq6-IU-HPr" id="s4o-sf-H0m"/>
+                            <outlet property="dataSource" destination="Gq6-IU-HPr" id="g6K-hg-rVa"/>
                             <outlet property="delegate" destination="Gq6-IU-HPr" id="Mar-sb-F1K"/>
                         </connections>
                     </tableView>
