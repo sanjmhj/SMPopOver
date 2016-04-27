@@ -148,8 +148,6 @@
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="150" height="54"/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="300" height="200"/>
                     <connections>
                         <outlet property="optionsTV" destination="AxP-sg-avP" id="CvQ-Uk-bfQ"/>
                     </connections>

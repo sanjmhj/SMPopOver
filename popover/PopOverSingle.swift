@@ -10,7 +10,7 @@ var data = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 1
 enum Options: Int {
     case All, Odd, Even, Prime, Fibonacci, Other
     static func getCount() -> Int {
-        return 3 //just to populate the first 3 cases
+        return 4 //just to populate the first 3 cases
     }
     
     func getData() -> [Int] {
@@ -69,9 +69,19 @@ class PopOverSingle: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.preferredContentSize = CGSize(width: 0, height: 44 * Options.getCount()) //height of cell * number of options on list
-
+        self.view.backgroundColor = UIColor.redColor()
         self.optionsTV.tableFooterView = UIView()// for blank plain view at black space at end of the table view
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.preferredContentSize = self.optionsTV.contentSize //height of cell * number of options on list
+
+    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(false)
+//        self.preferredContentSize = CGSize(width: 0,height: 0) //height of cell * number of options on list
+
     }
 }
 

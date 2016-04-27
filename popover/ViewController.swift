@@ -5,6 +5,8 @@ class ViewController: UITableViewController {
     var titleView: UIView?
     var navTitle: UILabel?
     var popoverViewController: PopOverSingle!
+    var width: CGFloat?
+    var height: CGFloat?
 
     var selectedOption = Options.All
     override func viewDidLoad() {
@@ -12,11 +14,11 @@ class ViewController: UITableViewController {
         //populating the data at initial state
         self.tableData = self.selectedOption.getData()
         
-        let width = (self.navigationController?.navigationBar.frame.width)!
-        let height = (self.navigationController?.navigationBar.frame.height)!
+        self.width = (self.navigationController?.navigationBar.frame.width)!
+        self.height = (self.navigationController?.navigationBar.frame.height)!
         let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.popOverController(_:)))
-        titleView = UIView(frame: CGRect(origin: CGPoint(x: width / 2, y: height / 2), size: CGSize(width: width/2, height: height)))
-        navTitle = UILabel(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: width/2 , height: height)))
+        titleView = UIView(frame: CGRect(origin: CGPoint(x: width! / 2, y: height! / 2), size: CGSize(width: width! / 2, height: height!)))
+        navTitle = UILabel(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: width! / 2 , height: height!)))
         navTitle?.textAlignment = .Center
         navTitle?.text = self.selectedOption.getTitleString()
         titleView?.addSubview(navTitle!)
@@ -33,7 +35,7 @@ class ViewController: UITableViewController {
             popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
             popoverViewController.popoverPresentationController!.delegate = self
             popoverViewController.popoverPresentationController?.sourceView = self.navigationController?.navigationBar.topItem?.titleView
-            popoverViewController.popoverPresentationController?.sourceRect = CGRect(x: self.titleView!.frame.width / 2, y: 0, width: 0, height: (self.navigationController?.navigationBar.frame.height)!)
+            popoverViewController.popoverPresentationController?.sourceRect = CGRect(x: self.titleView!.frame.width / 2, y: 0, width: 0, height: height!)
             popoverViewController.popoverPresentationController?.permittedArrowDirections = .Up
         }
     }
