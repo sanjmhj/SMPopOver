@@ -71,17 +71,7 @@ class PopOverSingle: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.redColor()
         self.optionsTV.tableFooterView = UIView()// for blank plain view at black space at end of the table view
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
         self.preferredContentSize = self.optionsTV.contentSize //height of cell * number of options on list
-
-    }
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(false)
-//        self.preferredContentSize = CGSize(width: 0,height: 0) //height of cell * number of options on list
-
     }
 }
 
@@ -123,4 +113,3 @@ extension PopOverSingle: UITableViewDataSource {
         return cell
     }
 }
-
