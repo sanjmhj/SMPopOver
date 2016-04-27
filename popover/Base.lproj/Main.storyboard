@@ -49,17 +49,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ahi-xS-KL0">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicCellID" id="ahi-xS-KL0" customClass="BasicCell" customModule="popover" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ahi-xS-KL0" id="f5K-ue-18v">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;number&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lG-L9-PdT">
+                                            <rect key="frame" x="259.5" y="11" width="81" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6lG-L9-PdT" firstAttribute="centerX" secondItem="f5K-ue-18v" secondAttribute="centerX" id="BnY-To-CZK"/>
+                                        <constraint firstItem="6lG-L9-PdT" firstAttribute="centerY" secondItem="f5K-ue-18v" secondAttribute="centerY" id="wbR-bA-7R4"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="6lG-L9-PdT" id="B4R-Ry-bge"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="Gq6-IU-HPr" id="s4o-sf-H0m"/>
+                            <outlet property="dataSource" destination="Gq6-IU-HPr" id="g6K-hg-rVa"/>
                             <outlet property="delegate" destination="Gq6-IU-HPr" id="Mar-sb-F1K"/>
                         </connections>
                     </tableView>
@@ -107,16 +122,10 @@
                                             <constraints>
                                                 <constraint firstItem="wYX-7O-jrD" firstAttribute="leading" secondItem="PIl-CJ-UEu" secondAttribute="leadingMargin" constant="30" id="4oZ-TC-7An"/>
                                                 <constraint firstItem="wYX-7O-jrD" firstAttribute="centerY" secondItem="PIl-CJ-UEu" secondAttribute="centerY" id="9Zf-F7-jvS"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="wYX-7O-jrD" secondAttribute="trailing" constant="30" id="wOp-SE-cKl"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="wOp-SE-cKl"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="wYX-7O-jrD" secondAttribute="trailing" constant="38" id="u4I-I8-PVz"/>
+                                            <constraint firstAttribute="trailing" secondItem="wYX-7O-jrD" secondAttribute="trailing" constant="38" id="dQy-PF-Zdm"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="options" destination="wYX-7O-jrD" id="Go2-sO-1gs"/>
