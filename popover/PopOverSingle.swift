@@ -30,8 +30,16 @@ enum Options: Int {
                     resultData.append(number)
                 }
             }
+        case .Prime:
+//            for num in data {
+//                if isPrime(num) {
+//                    resultData.append(num)
+//                }
+//            }
+            resultData = data
+            return resultData
         default:
-        resultData = data
+            resultData = data
         }
         return resultData
     }
@@ -51,7 +59,6 @@ enum Options: Int {
         case .Other:
             return "Others"
         }
-        
     }
     
     func getTitleString() -> String {
@@ -70,7 +77,7 @@ class PopOverSingle: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.optionsTV.tableFooterView = UIView()// for blank plain view at black space at end of the table view
-        self.preferredContentSize = self.optionsTV.contentSize //height of cell * number of options on list
+        self.preferredContentSize = self.optionsTV.contentSize
     }
 }
 

@@ -49,7 +49,7 @@ class ViewController: UITableViewController {
     }
     
     func popOverController(sender: UITapGestureRecognizer) {
-        self.performSegueWithIdentifier("PopImageSegueID", sender: self)
+        self.performSegueWithIdentifier("PopSegueID", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
